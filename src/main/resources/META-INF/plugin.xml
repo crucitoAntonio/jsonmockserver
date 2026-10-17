@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>com.dertoo.jsonmock</id>
+    <name>JSON Mock Server</name>
+    <vendor>dertoo</vendor>
+
+    <description><![CDATA[
+    Embedded local HTTP server to selectively mock REST services.<br/>
+    Requests matching an enabled rule are answered with a local JSON file;
+    everything else is passed through to the real backend.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="com.dertoo.jsonmock.settings.MockSettingsService"/>
+        <projectService serviceImplementation="com.dertoo.jsonmock.server.MockServerService"/>
+
+        <toolWindow id="JSON Mock Server"
+                    anchor="right"
+                    icon="AllIcons.Nodes.Plugin"
+                    factoryClass="com.dertoo.jsonmock.ui.MockToolWindowFactory"/>
+
+        <postStartupActivity implementation="com.dertoo.jsonmock.server.MockAutoStartActivity"/>
+
+        <notificationGroup id="JSON Mock Server" displayType="BALLOON"/>
+    </extensions>
+</idea-plugin>

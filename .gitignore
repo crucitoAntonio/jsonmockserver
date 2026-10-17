@@ -1,0 +1,23 @@
+.gradle/
+build/
+.idea/
+.intellijPlatform/
+*.iml
+.kotlin/
+
+# OS / local
+.DS_Store
+local.properties
+
+# Claude Code
+CLAUDE.md
+.claude/
+
+# Docs: solo se publica docs/GUIA_CODIGO.md
+docs/MANUAL_USUARIO.md
+docs/PUBLICAR_MARKETPLACE.md
+
+# Secretos / firma
+.env
+*.pem
+*.key
