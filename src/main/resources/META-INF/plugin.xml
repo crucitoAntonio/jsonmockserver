@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.dertoo.jsonmock</id>
     <name>JSON Mock Server</name>
-    <vendor>dertoo</vendor>
+    <vendor email="support@antcruz.dev" url="https://github.com/crucitoAntonio/jsonmockserver">MUPPET</vendor>
 
     <description><![CDATA[
     Embedded local HTTP server to selectively mock REST services.<br/>
